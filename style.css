@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #333;
+  mix-blend-mode: exclusion;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  padding: 3rem;
+}
+
+.main {
+  display: flex;
+}
+
+.left,
+.right {
+  flex: 1;
+  display: flex;
+  align-items: end;
+}
+
+.left h1 {
+  font-size: 6rem;
+}
+
+.right {
+  flex-direction: column;
+  justify-content: end;
+}
+
+.musk {
+  height: 500px;
+  margin-bottom: 64px;
+}
+
+.desc {
+  width: 500px;
+  font-size: 1.5rem;
+}
+
+.skills {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+
+.skills h2 {
+  color: white;
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.skill-list ul {
+  display: flex;
+  list-style: none;
+  width: 600px;
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.skill-list ul li {
+  text-decoration: none;
+  color: black;
+  padding: 10px 50px;
+  background-color: white;
+  border-radius: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.contact-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+  color: black;
+  padding-top: 8rem;
+  position: relative;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1 1 300px;
+}
+
+.footer-left h2 {
+  font-size: 5rem;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.footer-left button {
+    border: none;
+    padding: 30px 120px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: rgb(199, 199, 199);
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+.footer-right p {
+  margin: 0.5rem 0;
+}
+
+.contact-footer .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20rem;
+  font-weight: bolder;
+  opacity: .05;
+}
+
+/* Hide default cursor */
+body {
+  cursor: none;
+}
+
+/* Custom cursor base */
+.custom-cursor {
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  color: white;
+  font-size: 12px;
+  padding: 8px;
+  white-space: nowrap;
+}
+
+/* Enlarged on links */
+.custom-cursor.grow {
+  width: 40px;
+  height: 40px;
+}
+
+/* Text inside cursor */
+.cursor-text {
+  display: none;
+}
+
+/* Show text when hovering images */
+.custom-cursor.image-hover .cursor-text {
+  display: block;
+}
+
+/* Optional: Hide circle when text is shown */
+.custom-cursor.image-hover {
+  /* background-color: transparent; */
+  width: 80px;
+  height: 80px;
+}
+
